@@ -20,9 +20,5 @@ func someFunc() {
 }
 
 func createHugeString(size int) string {
-	var b strings.Builder
-	for i := 0; i < size; i++ {
-		b.WriteString("a")
-	}
-	return b.String()
+	return strings.Repeat("a", size)
 }

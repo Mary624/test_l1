@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	solutions.Example20()
+	solutions.Example15()
 	// solutions.Example22()
 }
