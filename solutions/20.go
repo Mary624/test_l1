@@ -15,7 +15,9 @@ func reverseWords(str string) string {
 	l := []rune(str)
 	// Builder предоставляет эффективную конкатенацию строк
 	var b strings.Builder
+	b.Grow(len(str))
 	var bW strings.Builder
+	bW.Grow(20)
 	for i := len(l) - 1; i >= 0; i-- {
 		if l[i] != ' ' || i == 0 {
 			bW.WriteRune(l[i])
@@ -38,6 +40,7 @@ func reverseWordsSFields(str string) string {
 		return ""
 	}
 	var b strings.Builder
+	b.Grow(len(str))
 	for i := len(l) - 1; i > 0; i-- {
 		b.WriteString(l[i] + " ")
 	}
